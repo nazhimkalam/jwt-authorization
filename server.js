@@ -37,17 +37,6 @@ app.get("/posts", authenticateToken, (req, res) => {
   res.json(posts.filter((post) => post.username === req.user.name));
 });
 
-app.post("/login", (req, res) => {
-  // Firstly you have to authenticate the user but, since this is mostly focused to authorization,
-  // let's just say that the user is authenticated
-
-  const username = req.body.username;
-  const user = { name: username };
-  const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
-  res.json({ accessToken: accessToken });
-});
-
-
 
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
