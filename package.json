@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "devServer": "nodemon server.js",
-    "authServer": "nodemon authServer.js"
+    "devServer": "nodemon servers/server.js",
+    "authServer": "nodemon servers/authServer.js"
   },
   "repository": {
     "type": "git",
